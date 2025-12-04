@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.3.2 (Python 3.13.7 on win32)" generated="2025-12-04T17:45:17.239648" rpa="false" schemaversion="5">
+<suite id="s1" name="Estudo-automacao-robot" source="C:\Estudo-automacao-robot">
+<suite id="s1-s1" name="Project" source="C:\Estudo-automacao-robot\project">
+<suite id="s1-s1-s1" name="Test-Cases" source="C:\Estudo-automacao-robot\project\test-cases">
+<suite id="s1-s1-s1-s1" name="Login" source="C:\Estudo-automacao-robot\project\test-cases\login.robot">
+<test id="s1-s1-s1-s1-t1" name="Realizar uma compra completa no site da saucedemo" line="28">
+<kw name="Open Browser" owner="SeleniumLibrary" type="SETUP">
+<msg time="2025-12-04T17:45:17.724664" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-04T17:45:17.724046" elapsed="1.754512"/>
+</kw>
+<kw name="Given que estou na tela de login" owner="login_sucesso">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:19.489801" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-12-04T17:45:19.488859" elapsed="1.826762"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-12-04T17:45:21.316197" elapsed="0.060004"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:19.479585" elapsed="1.896898"/>
+</kw>
+<kw name="And preencho o campo de usuario" owner="login_sucesso">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:21.399922" level="INFO">Typing text 'standard_user' into text field '//*[@id="user-name"]'.</msg>
+<arg>${TELA_LOGIN.USARNAME_INPUT}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:21.394451" elapsed="0.219693"/>
+</kw>
+<arg>standard_user</arg>
+<status status="PASS" start="2025-12-04T17:45:21.384968" elapsed="0.229438"/>
+</kw>
+<kw name="And preencho o campo de senha" owner="login_sucesso">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:21.626123" level="INFO">Typing text 'secret_sauce' into text field '//*[@id="password"]'.</msg>
+<arg>${TELA_LOGIN.PASSWORD_INPUT}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:21.625242" elapsed="0.103821"/>
+</kw>
+<arg>secret_sauce</arg>
+<status status="PASS" start="2025-12-04T17:45:21.619810" elapsed="0.109526"/>
+</kw>
+<kw name="When clico no botão de login" owner="login_sucesso">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:21.739221" level="INFO">Clicking button '//*[@id="login-button"]'.</msg>
+<arg>${TELA_LOGIN.LOGIN_BUTTON}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-12-04T17:45:21.737938" elapsed="0.144641"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:21.733884" elapsed="0.149063"/>
+</kw>
+<kw name="Then o sistema deve me redirecionar para a página inicial" owner="login_sucesso">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>${TELA_LOGIN.LOGO_SAUCEDEMO}</arg>
+<arg>5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:21.892629" elapsed="0.027950"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:21.937367" level="INFO">Element '//*[@id="header_container"]/div[1]/div[2]/div' is displayed.</msg>
+<arg>${TELA_LOGIN.LOGO_SAUCEDEMO}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-12-04T17:45:21.920894" elapsed="0.017062"/>
+</kw>
+<status status="PASS" start="2025-12-04T17:45:21.890684" elapsed="0.047550"/>
+</kw>
+<kw name="And adiciono um produto ao carrinho" owner="login_sucesso">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-12-04T17:45:21.941828" level="FAIL">Resolving variable '${REALIZAR_COMPRAS.BOTAO_PRODUTO}' failed: AttributeError: 'str' object has no attribute 'BOTAO_PRODUTO'</msg>
+<arg>${REALIZAR_COMPRAS.BOTAO_PRODUTO}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="FAIL" start="2025-12-04T17:45:21.941131" elapsed="0.006158">Resolving variable '${REALIZAR_COMPRAS.BOTAO_PRODUTO}' failed: AttributeError: 'str' object has no attribute 'BOTAO_PRODUTO'</status>
+</kw>
+<status status="FAIL" start="2025-12-04T17:45:21.940498" elapsed="0.007230">Resolving variable '${REALIZAR_COMPRAS.BOTAO_PRODUTO}' failed: AttributeError: 'str' object has no attribute 'BOTAO_PRODUTO'</status>
+</kw>
+<kw name="And vou para o carrinho de compras" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:21.948466" elapsed="0.005833"/>
+</kw>
+<kw name="And prossigo para o checkout" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:21.959923" elapsed="0.006332"/>
+</kw>
+<kw name="And preencho o Firs Name" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:21.975546" elapsed="0.008209"/>
+</kw>
+<kw name="And preencho o Last Name" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:21.990650" elapsed="0.005271"/>
+</kw>
+<kw name="And preencho o Zip Code" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:22.002586" elapsed="0.006146"/>
+</kw>
+<kw name="And clico em Continue" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:22.014835" elapsed="0.003570"/>
+</kw>
+<kw name="And checo o produto escolhido" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:22.028486" elapsed="0.013222"/>
+</kw>
+<kw name="When clico em Finish" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:22.053071" elapsed="0.007711"/>
+</kw>
+<kw name="Then a compra deve ser finalizada com sucesso" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:22.067470" elapsed="0.005409"/>
+</kw>
+<kw name="And verifico a mensagem de confirmação da compra" owner="login_sucesso">
+<status status="NOT RUN" start="2025-12-04T17:45:22.078635" elapsed="0.003991"/>
+</kw>
+<tag>completo</tag>
+<tag>compras</tag>
+<status status="FAIL" start="2025-12-04T17:45:17.716676" elapsed="4.371424">Resolving variable '${REALIZAR_COMPRAS.BOTAO_PRODUTO}' failed: AttributeError: 'str' object has no attribute 'BOTAO_PRODUTO'</status>
+</test>
+<doc>Esse arquivo contém cenarios de testes para login válido e inválido.</doc>
+<status status="FAIL" start="2025-12-04T17:45:17.322843" elapsed="4.793622"/>
+</suite>
+<status status="FAIL" start="2025-12-04T17:45:17.316328" elapsed="4.817983"/>
+</suite>
+<status status="FAIL" start="2025-12-04T17:45:17.307346" elapsed="4.856837"/>
+</suite>
+<status status="FAIL" start="2025-12-04T17:45:17.246955" elapsed="4.925359"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="0" fail="1" skip="0">completo</stat>
+<stat pass="0" fail="1" skip="0">compras</stat>
+</tag>
+<suite>
+<stat name="Estudo-automacao-robot" id="s1" pass="0" fail="1" skip="0">Estudo-automacao-robot</stat>
+<stat name="Project" id="s1-s1" pass="0" fail="1" skip="0">Estudo-automacao-robot.Project</stat>
+<stat name="Test-Cases" id="s1-s1-s1" pass="0" fail="1" skip="0">Estudo-automacao-robot.Project.Test-Cases</stat>
+<stat name="Login" id="s1-s1-s1-s1" pass="0" fail="1" skip="0">Estudo-automacao-robot.Project.Test-Cases.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
