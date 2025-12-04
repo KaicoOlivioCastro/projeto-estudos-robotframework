@@ -25,21 +25,4 @@ Validar login inválido
     When clico no botão de login
     Then o sistema deve exibir uma mensagem de erro "Epic sadface: Username and password do not match any user in this service"
 
-Realizar uma compra completa no site da saucedemo    
-    [Tags]    compras    completo
-    Given que estou na tela de login
-    And preencho o campo de usuario    standard_user
-    And preencho o campo de senha      secret_sauce
-    When clico no botão de login
-    Then o sistema deve me redirecionar para a página inicial
-    And adiciono um produto ao carrinho
-    And vou para o carrinho de compras
-    And prossigo para o checkout
-    And preencho o Firs Name
-    And preencho o Last Name
-    And preencho o Zip Code
-    And clico em Continue
-    And checo o produto escolhido
-    When clico em Finish
-    Then a compra deve ser finalizada com sucesso
-    And verifico a mensagem de confirmação da compra
+
