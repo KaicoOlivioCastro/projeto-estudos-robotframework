@@ -3,7 +3,7 @@ Documentation     Biblioteca de recursos para realizar compra na loja
 Library           SeleniumLibrary
 
 *** Variables ***
-${REALIZAR_COMPRAS}
+&{REALIZAR_COMPRAS}
 ...    BOTAO_PRODUTO=//*[@id="add-to-cart-sauce-labs-backpack"]
 ...    ICONE_CARRINHO=//*[@id="shopping_cart_container"]/a
 ...    BOTAO_CHECKOUT=//*[@id="checkout"]
