@@ -1,13 +1,11 @@
 *** Settings ***
 Documentation     Biblioteca de recursos para a tela de login com sucesso
-Library           SeleniumLibrary
-Resource          ../locators/login_locators.resource
-Resource          ../locators/realizar_compra.resource
+Resource          ../main.resource
 
 *** Keywords ***
 
 que estou na tela de login
-    Open Browser    https://www.saucedemo.com/    chrome
+    Open Browser    ${TELA_LOGIN.URL_LOGIN}   chrome
     Maximize Browser Window
 preencho o campo de usuario
     [Arguments]    ${username}

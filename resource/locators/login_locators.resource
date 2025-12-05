@@ -3,6 +3,7 @@ Documentation     Locators presentes na tela de login para realizar login invali
 
 *** Variables ***
 &{TELA_LOGIN}
+...    URL_LOGIN=https://www.saucedemo.com/
 ...    USARNAME_INPUT=//*[@id="user-name"]
 ...    PASSWORD_INPUT=//*[@id="password"]
 ...    LOGIN_BUTTON=//*[@id="login-button"]

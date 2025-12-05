@@ -1,11 +1,16 @@
 *** Settings ***
 Documentation     Biblioteca de recursos para a tela de login com sucesso
-Library           SeleniumLibrary
-Resource          ../locators/login_locators.resource
-Resource          ../locators/realizar_compra.resource
+Resource      ../main.resource
 
 *** Keywords ***
-And adiciono um produto ao carrinho
+Abrir o navegador
+    Open Browser   ${TELA_LOGIN.URL_LOGIN}   chrome    
+    ...            options=add_experimental_option("detach", True)
+    Maximize Browser Window
+Fechar o navegador
+    Close Browser
+
+adiciono um produto ao carrinho
     Click Button    ${REALIZAR_COMPRAS.BOTAO_PRODUTO}
 
 vou para o carrinho de compras

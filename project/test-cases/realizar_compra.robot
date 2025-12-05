@@ -4,7 +4,7 @@ Resource          ../../resource/pages/realizar_compra.robot
 Resource          ../../resource/pages/login_sucesso.robot
 Library           SeleniumLibrary
 
-Test Setup       Open Browser    https://www.saucedemo.com/    chrome
+Test Setup       Open Browser    ${TELA_LOGIN.URL_LOGIN}   chrome 
 # Test Teardown    Close Browser
 
 *** Test Cases ***
